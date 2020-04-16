@@ -1,7 +1,7 @@
 package demion4;
 
 import java.util.Scanner;
-
+//测试
 public class Demion1 {
     public static void main(String[] args) {
         Teacher t = new Teacher("张三","数据库");
