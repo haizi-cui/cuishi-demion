@@ -1,7 +1,6 @@
 package demion12;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class LinkedListtest1 {
 
