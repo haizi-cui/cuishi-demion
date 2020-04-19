@@ -14,8 +14,8 @@ public class Sql_jichu {
             e.printStackTrace();
         }
         try {
-            //主机名+端口+库名
-            String url = "jdbc:mysql:"+"//192.168.0.26:3306/information_schema";
+            //主机名+端口+库名，设置编码格式表的格式也要为utf-8，否则会报错
+            String url = "jdbc:mysql:"+"//192.168.0.27:3306/mysql?characterEncoding=UTF-8";
             con = DriverManager.getConnection(url,"root","123456");
             System.out.println("连接成功");
         } catch (SQLException e) {
@@ -23,10 +23,4 @@ public class Sql_jichu {
         }
         return con;
     }
-
-    public static void main(String[] args) {
-        Sql_jichu sql_jichu = new Sql_jichu();
-        sql_jichu.getConnection();
-    }
-
     }
