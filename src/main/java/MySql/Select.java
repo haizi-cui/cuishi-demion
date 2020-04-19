@@ -17,7 +17,7 @@ public class Select {
         //像数据库发送命令，增删改都用这个命令
 //        statement.executeUpdate("insert into xing(id,age,namess) values ('18','35','崔')");
 
-        //结果集打印出来、
+        //结果集打印出来、resultSet.next()移动指针
         while (resultSet.next()){
             int id = resultSet.getInt("id");
             int age = resultSet.getInt("age");
