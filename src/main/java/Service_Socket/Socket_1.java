@@ -1,9 +1,6 @@
 package Service_Socket;
 
-import java.io.DataOutput;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.Socket;
 
 public class Socket_1 {
@@ -20,9 +17,17 @@ public class Socket_1 {
             DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
 
             dataOutputStream.writeUTF("hello word");
+
+            //监听到后读取数据
+            InputStream inputStream = socket.getInputStream();
+            DataInputStream reader = new DataInputStream(inputStream);
+
+            String str = reader.readUTF();
+
+            System.out.println("她给我说"+str);
             //刷新
             dataOutputStream.flush();
-
+            inputStream.close();
             outputStream.flush();
             outputStream.close();
 

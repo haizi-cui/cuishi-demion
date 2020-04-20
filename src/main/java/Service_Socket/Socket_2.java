@@ -21,8 +21,18 @@ public class Socket_2 {
 
         System.out.println("她给我说"+str);
 
+
+        //给客户端发消息
+        OutputStream outputStream =service.getOutputStream();
+
+        DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
+
+        dataOutputStream.writeUTF("客户端你好");
+
         serverSocket.close();
         inputStream.close();
+        outputStream.flush();
+        outputStream.close();
         reader.close();
 
     }
