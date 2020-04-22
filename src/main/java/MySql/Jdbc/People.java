@@ -10,16 +10,16 @@ public class People {
 
     private String much;
 
-    private String gmt_much;
+    private String gnt_much;
 
     private String gmt_mucht;
 
 
-    public People(String age, String namess, String much, String gmt_much, String gmt_mucht) {
+    public People(String age, String namess, String much, String gnt_much, String gmt_mucht) {
         this.age = age;
         this.namess = namess;
         this.much = much;
-        this.gmt_much = gmt_much;
+        this.gnt_much = gnt_much;
         this.gmt_mucht = gmt_mucht;
     }
 
@@ -47,12 +47,12 @@ public class People {
         this.much = much;
     }
 
-    public String getGmt_much() {
-        return gmt_much;
+    public String getGnt_much() {
+        return gnt_much;
     }
 
-    public void setGmt_much(String gmt_much) {
-        this.gmt_much = gmt_much;
+    public void setGnt_much(String gnt_much) {
+        this.gnt_much = gnt_much;
     }
 
     public String getGmt_mucht() {
@@ -61,5 +61,16 @@ public class People {
 
     public void setGmt_mucht(String gmt_mucht) {
         this.gmt_mucht = gmt_mucht;
+    }
+
+    @Override
+    public String toString() {
+        return "People{" +
+                "age='" + age + '\'' +
+                ", namess='" + namess + '\'' +
+                ", much='" + much + '\'' +
+                ", gnt_much='" + gnt_much + '\'' +
+                ", gmt_mucht='" + gmt_mucht + '\'' +
+                '}';
     }
 }
