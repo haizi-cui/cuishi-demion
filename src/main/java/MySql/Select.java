@@ -8,7 +8,7 @@ public class Select {
     public static void main(String[] args) throws SQLException {
 
         Sql_jichu sql_jichu = new Sql_jichu();
-        Connection connection =sql_jichu.getConnection();
+        Connection connection =sql_jichu.alicon();
 
         String sql = "select * from xing";
         Statement statement = connection.createStatement();
