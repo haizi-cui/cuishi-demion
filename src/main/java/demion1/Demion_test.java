@@ -12,8 +12,9 @@ public class Demion_test {
         acc.setAccountPwd("123456");
         test(acc);
     }
+
     //把类传进方法中，类当成一个参数
-    public static void test(Damion a){
+    public static void test(Damion a) {
         a.saveMoney(100);
         System.out.println(a.getAccountBalance());
         System.out.println(a.getAccountName());

@@ -21,7 +21,7 @@ public class Yicahng {
                 } finally {
                     System.out.println("怎么样都会输出");
                 }
-            }else {
+            } else {
                 break;
             }
         }

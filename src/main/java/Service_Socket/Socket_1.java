@@ -8,11 +8,11 @@ public class Socket_1 {
     public static void main(String[] args) {
 
         try {
-            Socket socket = new Socket("192.168.91.1",3459);
+            Socket socket = new Socket("192.168.91.1", 3459);
             /*
-            *通过流的方式把内容传到网络
+             *通过流的方式把内容传到网络
              */
-            OutputStream outputStream =  socket.getOutputStream();
+            OutputStream outputStream = socket.getOutputStream();
             //产生数据流
             DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
 
@@ -24,7 +24,7 @@ public class Socket_1 {
 
             String str = reader.readUTF();
 
-            System.out.println("她给我说"+str);
+            System.out.println("她给我说" + str);
             //刷新
             dataOutputStream.flush();
             inputStream.close();

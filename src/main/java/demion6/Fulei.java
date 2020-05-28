@@ -2,16 +2,19 @@ package demion6;
 
 public class Fulei {
     private String age;
-    private String  name;
+    private String name;
 
-    public Fulei(){};
+    public Fulei() {
+    }
+
+    ;
 
     public Fulei(String age, String name) {
         this.age = age;
         this.name = name;
     }
 
-    public void much(){
+    public void much() {
         System.out.println("花钱");
     }
 

@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 public class Vo {
     Scanner scanner = new Scanner(System.in);
-    public void addvo(){
+
+    public void addvo() {
         System.out.println("年龄");
         String age = scanner.next();
         System.out.println("名字");
@@ -20,7 +21,7 @@ public class Vo {
         //插入数据库
         try {
             //联动调用
-            new Select_Jdbc().Sql_SQL(new People(age,namess,much,gnt_much,gmt_mucht));
+            new Select_Jdbc().Sql_SQL(new People(age, namess, much, gnt_much, gmt_mucht));
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("sql有问题");
@@ -53,8 +54,8 @@ public class Vo {
 
 
     public void Select_sql() throws SQLException {
-        List<People>  list= new Select_Jdbc().SelectS_Jdbc();
-        for ( People people: list){
+        List<People> list = new Select_Jdbc().SelectS_Jdbc();
+        for (People people : list) {
             System.out.println(people);
         }
     }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatisdemion.dao.UserMapper">
+    <!--id为调用的参数，resultType为返回的数据类型-->
+    <select id="getUserList" resultType="mybatisdemion.pojo.Users">
+        select * from users;
+    </select>
+
+    <!--parameterType为传进来的数据类型resultType为返回的数据类型-->
+    <select id="getUserByid" resultType="mybatisdemion.pojo.Users" parameterType="String">
+        select * from users where username = #{username};
+    </select>
+
+    <!--传进来一个对象类型的数据,对象中的属性可以直接取-->
+    <insert id="InitioUser" parameterType="mybatisdemion.pojo.Users" >
+        insert into users (username,usersex) values (#{username},#{usersex});
+    </insert>
+
+    <update id="Updatauser" parameterType="mybatisdemion.pojo.Users">
+        update users set username=(#{username}),usersex = (#{usersex})where id = (#{id});
+    </update>
+
+    <delete id="DelentUser" parameterType="int">
+        delete from users where id = (#{id});
+    </delete>
+</mapper>

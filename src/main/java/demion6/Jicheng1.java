@@ -1,8 +1,8 @@
 package demion6;
 
-public class Jicheng1 extends Fulei{
+public class Jicheng1 extends Fulei {
 
-    public void help(){
+    public void help() {
 
         super.setAge("123");
         System.out.println(super.getAge());
@@ -12,7 +12,7 @@ public class Jicheng1 extends Fulei{
 
     //对父类中的方法进行重写
     @Override
-    public void much(){
+    public void much() {
         System.out.println("重写父类的方法");
     }
 }

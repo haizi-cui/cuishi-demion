@@ -20,7 +20,7 @@ public class LinkedListtest1 {
         System.out.println(list.size());
 
         //修改
-        list.set(0,"19");
+        list.set(0, "19");
         System.out.println(list);
 
         //增加到第一个
@@ -32,7 +32,7 @@ public class LinkedListtest1 {
         System.out.println(list);
 
         //取出来第一位
-        String A=list.getFirst();
+        String A = list.getFirst();
         System.out.println(A);
 
         //取出来最后一位

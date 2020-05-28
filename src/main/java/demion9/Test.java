@@ -14,12 +14,8 @@ public class Test {
         Printer p = new Printer();
 
         //进行打印
-        p.print(paper,ink);
-        p.print(p1,ink);
-
-
-
-
+        p.print(paper, ink);
+        p.print(p1, ink);
 
 
     }

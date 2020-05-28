@@ -3,9 +3,12 @@ package demion10;
 public class Teacher {
 
     private String name;
-    private String  age;
+    private String age;
 
-    public Teacher(){};
+    public Teacher() {
+    }
+
+    ;
 
 
     public Teacher(String name, String age) {

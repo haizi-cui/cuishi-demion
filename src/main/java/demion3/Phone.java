@@ -1,4 +1,5 @@
 package demion3;
+
 //手机的属性
 public class Phone {
 
@@ -7,7 +8,8 @@ public class Phone {
     //电池的对象
     private Cell cell; //定义为原来类的属性的一个变量来接收
 
-    public Phone(){ }
+    public Phone() {
+    }
 
 
     public Phone(String phoneType, Cell cell) {
@@ -32,17 +34,18 @@ public class Phone {
     }
 
     //电池可以进行蓄电
-    public  void  xudian(){
+    public void xudian() {
         //调用电池的充电行为,电池的充电，即为手机的蓄电
         cell.charge();
     }
 
     //手机的播放跟下载音乐
-    public String downLoadMusic(String musicName){
-        return "正在下载"+musicName;
+    public String downLoadMusic(String musicName) {
+        return "正在下载" + musicName;
     }
-    public void playMusic(String musicName){
+
+    public void playMusic(String musicName) {
         this.downLoadMusic(musicName);
-        System.out.println("正在播放"+musicName);
+        System.out.println("正在播放" + musicName);
     }
 }

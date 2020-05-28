@@ -8,11 +8,12 @@ import java.io.OutputStream;
 public class Byte_io {
     public static void main(String[] args) {
         try {
-            test2("D:\\cui.txt","我爱你你");
+            test2("D:\\cui.txt", "我爱你你");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     //单字节
     public static void test1(String path) throws IOException {  //path为文件路径
 
@@ -23,9 +24,10 @@ public class Byte_io {
         out.flush();
         out.close();
     }
+
     //输出字符串
-    public static void test2(String path,String str) throws IOException{
-        OutputStream out = new FileOutputStream(path,true);//默认为覆盖，true为追加
+    public static void test2(String path, String str) throws IOException {
+        OutputStream out = new FileOutputStream(path, true);//默认为覆盖，true为追加
 
         //写入一个字符串
         byte[] bytes = str.getBytes();//将String转为字节数组

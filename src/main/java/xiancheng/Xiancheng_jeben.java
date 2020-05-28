@@ -3,15 +3,15 @@ package xiancheng;
 
 import javax.jws.soap.SOAPMessageHandlers;
 
-class   Mythread extends Thread{
+class Mythread extends Thread {
     @Override
     public void run() {
-        for (int i = 0 ; i< 100 ; i++){
+        for (int i = 0; i < 100; i++) {
 
-            if (i % 2 ==0){
-                System.out.println(Thread.currentThread().getName()+i);
+            if (i % 2 == 0) {
+                System.out.println(Thread.currentThread().getName() + i);
             }
-            if (i %20 ==0){
+            if (i % 20 == 0) {
                 yield();  //释放执行权限，将权限重新交给cpu来自行分配
             }
         }
@@ -31,11 +31,11 @@ public class Xiancheng_jeben {
         Thread.currentThread().setName("主");  //设置主线程名称
         //也是设置线程的级别
         Thread.currentThread().setPriority(Thread.NORM_PRIORITY);
-        for (int i = 0 ; i < 100 ; i++){
-            if (i % 2 != 0){
-                System.out.println(Thread.currentThread().getName()+i);
+        for (int i = 0; i < 100; i++) {
+            if (i % 2 != 0) {
+                System.out.println(Thread.currentThread().getName() + i);
             }
-            if (i == 0){
+            if (i == 0) {
                 try {
                     mythread.join();  //主线程将执行权限交给mythread分线程
                 } catch (InterruptedException e) {

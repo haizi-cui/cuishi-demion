@@ -2,10 +2,13 @@ package demion4;
 
 public class Student {
 
-    private  String studentId;
+    private String studentId;
     private String studentName;
 
-    public Student(){};
+    public Student() {
+    }
+
+    ;
 
     public Student(String studentId, String studentName) {
         this.studentId = studentId;

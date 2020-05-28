@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class TestRuntime {
     public static void main(String[] args) {
-        Runtime  runtime = Runtime.getRuntime();
+        Runtime runtime = Runtime.getRuntime();
         //idea占用的计算机的内存  kb
         System.out.println(runtime.freeMemory());
 

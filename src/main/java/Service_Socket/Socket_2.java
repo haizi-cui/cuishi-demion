@@ -19,11 +19,11 @@ public class Socket_2 {
 
         String str = reader.readUTF();
 
-        System.out.println("她给我说"+str);
+        System.out.println("她给我说" + str);
 
 
         //给客户端发消息
-        OutputStream outputStream =service.getOutputStream();
+        OutputStream outputStream = service.getOutputStream();
 
         DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
 

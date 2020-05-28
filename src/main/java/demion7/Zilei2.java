@@ -1,6 +1,6 @@
 package demion7;
 
-public class Zilei2 extends Fulei1{
+public class Zilei2 extends Fulei1 {
 
     @Override
     public void dute() {

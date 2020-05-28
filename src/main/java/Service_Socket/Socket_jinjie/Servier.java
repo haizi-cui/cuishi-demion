@@ -31,20 +31,16 @@ public class Servier {
 
         String sendNames = "";
         //向下转型，数据类型不一样，必须进行转换
-        while (!sendNames.equals("bye")){
+        while (!sendNames.equals("bye")) {
             //读数据
             Request_info requestInfo = (Request_info) read.readObject();
-            System.out.println("【"+requestInfo.getSendeer()+"】对客户端说"+requestInfo.getConter());
+            System.out.println("【" + requestInfo.getSendeer() + "】对客户端说" + requestInfo.getConter());
             //写数据
-            System.out.println("请输入你要对"+requestInfo.getSendeer()+"说的话");
+            System.out.println("请输入你要对" + requestInfo.getSendeer() + "说的话");
             sendNames = scanner.next();
-            Request_info request_info = new Request_info("服务器",sendNames);
+            Request_info request_info = new Request_info("服务器", sendNames);
             objectOutputStream.writeObject(request_info);
         }
-
-
-
-
 
 
         //通信结束，关闭所有流

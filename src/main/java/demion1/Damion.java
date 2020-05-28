@@ -6,31 +6,34 @@ public class Damion {
     private double accountBalance;  // 金额
 
     //定义方法
-    public void setAccountName(String _accountName){
+    public void setAccountName(String _accountName) {
         accountName = _accountName;
     }
-    public String getAccountName(){
+
+    public String getAccountName() {
         return accountName;
     }
 
-    public void setAccountPwd(String _accountPad){
+    public void setAccountPwd(String _accountPad) {
         accountPwd = _accountPad;
     }
-    public String getAccountPwd(){
+
+    public String getAccountPwd() {
         return accountPwd;
     }
 
 
-    public double getAccountBalance(){
+    public double getAccountBalance() {
         return accountBalance;
     }
 
     //定义单独的方法，进行存钱
-    public void saveMoney(double _vm){
+    public void saveMoney(double _vm) {
         accountBalance += _vm;
     }
+
     //取钱
-    public void reduceMoney(double _vm){
+    public void reduceMoney(double _vm) {
         accountBalance -= _vm;
     }
 

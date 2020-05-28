@@ -8,7 +8,7 @@ public class Duixiangliu {
     public static void main(String[] args) {
         try {
             try {
-                test4(test3(),"peizhi/person");
+                test4(test3(), "peizhi/person");
                 test5("peizhi/person");
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
@@ -19,12 +19,12 @@ public class Duixiangliu {
     }
 
     //将对象流保存
-    private static void test1(Person P , String path) throws IOException {
+    private static void test1(Person P, String path) throws IOException {
         //创建对象流对象
         ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(path));
         //将Person对象写入流中
         out.writeObject(P);
-        out.writeObject(new Person("李四",19));
+        out.writeObject(new Person("李四", 19));
         out.writeObject(null);
         //刷新，关闭
         out.flush();
@@ -38,9 +38,9 @@ public class Duixiangliu {
 
         //读取保存流的地址
         Object obj = null;
-        while ((obj = out.readObject()) != null){
-            Person person=(Person) obj;
-            System.out.println(person.getName()+"\t"+person.getAge());
+        while ((obj = out.readObject()) != null) {
+            Person person = (Person) obj;
+            System.out.println(person.getName() + "\t" + person.getAge());
         }
 
         //关闭流
@@ -48,15 +48,15 @@ public class Duixiangliu {
     }
 
     //对象流保存list集合
-    public static List<Person> test3(){
+    public static List<Person> test3() {
         List<Person> list = new ArrayList<Person>();
-        list.add(new Person("张三",13));
-        list.add(new Person("李四",14));
-        list.add(new Person("王麻子",15));
+        list.add(new Person("张三", 13));
+        list.add(new Person("李四", 14));
+        list.add(new Person("王麻子", 15));
         return list;
     }
 
-    private static void test4(List<Person> list ,String path) throws IOException {
+    private static void test4(List<Person> list, String path) throws IOException {
         //创建流对象
         ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(path));
         //保存list集合
@@ -75,18 +75,9 @@ public class Duixiangliu {
 
         List<Person> list = (List<Person>) objectInputStream.readObject();
 
-        for (Person person : list){
-            System.out.println(person.getName()+"\t"+person.getAge());
+        for (Person person : list) {
+            System.out.println(person.getName() + "\t" + person.getAge());
         }
-
-
-
-
-
-
-
-
-
 
 
     }

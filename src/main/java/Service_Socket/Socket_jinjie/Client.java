@@ -8,7 +8,7 @@ public class Client {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-        Socket socket = new Socket("192.168.91.1",1098);
+        Socket socket = new Socket("192.168.91.1", 1098);
         //使用socket产生输出流输出流对象，写数据的流
         OutputStream outputStream = socket.getOutputStream();
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
@@ -24,20 +24,19 @@ public class Client {
         String sendName = scanner.next();
 
         String content = "";
-        while (!content.equals("bye")){
+        while (!content.equals("bye")) {
             //写数据
             System.out.println("请输入发送的内容");
             content = scanner.next();
-            Request_info requestInfo = new Request_info(sendName,content);
+            Request_info requestInfo = new Request_info(sendName, content);
             objectOutputStream.writeObject(requestInfo);
 
             //向下转型，数据类型不一样，必须进行转换
             //读数据
             Request_info request_info = (Request_info) read.readObject();
-            System.out.println("【"+request_info.getSendeer()+"】对服务器说"+request_info.getConter());
+            System.out.println("【" + request_info.getSendeer() + "】对服务器说" + request_info.getConter());
 
         }
-
 
 
         //刷新关闭
@@ -54,7 +53,6 @@ public class Client {
         socket.close();
         inputStream.close();
         read.close();
-
 
 
     }

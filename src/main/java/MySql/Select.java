@@ -8,7 +8,7 @@ public class Select {
     public static void main(String[] args) throws SQLException {
 
         Sql_jichu sql_jichu = new Sql_jichu();
-        Connection connection =sql_jichu.alicon();
+        Connection connection = sql_jichu.alicon();
 
         String sql = "select * from xing";
         Statement statement = connection.createStatement();
@@ -18,12 +18,12 @@ public class Select {
 //        statement.executeUpdate("insert into xing(id,age,namess) values ('18','35','崔')");
 
         //结果集打印出来、resultSet.next()移动指针
-        while (resultSet.next()){
+        while (resultSet.next()) {
             int id = resultSet.getInt("id");
             int age = resultSet.getInt("age");
             String namess = resultSet.getString("namess");
 
-            System.out.println(id+age+namess);
+            System.out.println(id + age + namess);
         }
 
 

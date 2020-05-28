@@ -4,7 +4,11 @@ public class Teacher {
 
     private String teacherName;   //姓名
     private String teacherCourse;  //课程
-    public  Teacher(){};
+
+    public Teacher() {
+    }
+
+    ;
 
     public Teacher(String teacherName, String teacherCourse) {
         this.teacherName = teacherName;

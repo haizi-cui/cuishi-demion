@@ -23,22 +23,26 @@ public class Cui {
         this.name = name;
     }
 
-    public Cui(String name,String age) {
+    public Cui(String name, String age) {
         this.name = name;
         this.age = age;
     }
-    public Cui(){};
+
+    public Cui() {
+    }
+
+    ;
 
     @Override
-    public boolean equals(Object obj){
-        if(this == obj){
+    public boolean equals(Object obj) {
+        if (this == obj) {
             return true;
         }
-        if(obj instanceof Cui){
-                Cui c = (Cui) obj;
-                if (c.getName().equals(this.name) && c.getAge().equals(this.age )){
-                    return true;
-                }
+        if (obj instanceof Cui) {
+            Cui c = (Cui) obj;
+            if (c.getName().equals(this.name) && c.getAge().equals(this.age)) {
+                return true;
+            }
         }
         return false;
     }
@@ -53,6 +57,6 @@ public class Cui {
 
     @Override
     public int hashCode() {
-        return this.name.hashCode()+this.age.hashCode();
+        return this.name.hashCode() + this.age.hashCode();
     }
 }

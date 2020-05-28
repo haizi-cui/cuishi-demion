@@ -16,7 +16,6 @@ public class Request_info implements Serializable {
     private String conter;
 
 
-
     public String getSendeer() {
         return sendeer;
     }

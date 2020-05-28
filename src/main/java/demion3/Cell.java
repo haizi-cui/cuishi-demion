@@ -1,4 +1,5 @@
 package demion3;
+
 //电池的各个属性
 public class Cell {
 
@@ -6,11 +7,11 @@ public class Cell {
     private int cellRl;       //容量
     private int cellDl;        //电量
 
-    public  Cell(){
+    public Cell() {
 
     }
 
-    public Cell(int cellRl,String cellType){
+    public Cell(int cellRl, String cellType) {
         this.cellRl = cellRl;
         this.cellType = cellType;
     }
@@ -37,8 +38,8 @@ public class Cell {
     }
 
     //充电行为
-    public void charge(){
-        for (int i =cellDl;i<= cellRl;i++){
+    public void charge() {
+        for (int i = cellDl; i <= cellRl; i++) {
             System.out.println("当前电量为" + cellDl);
             this.cellDl++;
         }
