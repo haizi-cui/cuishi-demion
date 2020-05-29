@@ -3,6 +3,7 @@ package mybatisdemion.dao;
 import mybatisdemion.pojo.Users;
 
 import java.util.List;
+import java.util.Map;
 
 public interface UserMapper {
     /**
@@ -35,5 +36,16 @@ public interface UserMapper {
      */
 
     public int DelentUser(int id);
+
+    /**
+     * 万能Map
+     */
+    public int InitioUser2(Map<String ,Object> map);
+
+    /**
+     * 模糊查询
+     * @param
+     */
+    public  List<Users> LinkSelect(String value);
 
 }

@@ -18,6 +18,11 @@
         insert into users (username,usersex) values (#{username},#{usersex});
     </insert>
 
+    <!--map类型的参数-->
+    <insert id="InitioUser2" parameterType="map">
+        insert into users (username,usersex) values (#{hhh},#{uzzzsersex});
+    </insert>
+
     <update id="Updatauser" parameterType="mybatisdemion.pojo.Users">
         update users set username=(#{username}),usersex = (#{usersex})where id = (#{id});
     </update>
@@ -25,4 +30,10 @@
     <delete id="DelentUser" parameterType="int">
         delete from users where id = (#{id});
     </delete>
+
+    <!--模糊查询-->
+    <select id="LinkSelect" resultType="mybatisdemion.pojo.Users" >
+        select * from users where username like #{value}
+    </select>
+
 </mapper>

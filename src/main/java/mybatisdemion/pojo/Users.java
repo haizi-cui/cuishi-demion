@@ -32,8 +32,7 @@ public class Users {
         this.usersex = usersex;
     }
 
-    public Users(int id, String username, String usersex) {
-        this.id = id;
+    public Users( String username, String usersex) {
         this.username = username;
         this.usersex = usersex;
     }
