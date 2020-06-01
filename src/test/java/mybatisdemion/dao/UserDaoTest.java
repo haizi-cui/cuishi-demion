@@ -32,11 +32,12 @@ public class UserDaoTest {
 //        userMapper.Updatauser(new Users(5,"崔","19"));
 //        userMapper.DelentUser(1);
 
-        List<Users> usersList = userMapper.LinkSelect("%崔%");
+        List<Users> usersList = userMapper.LinkSelect("崔");
         for (Users users : usersList) {
             System.out.println(users);
-
             sqlSession.close();
         }
     }
+
+
 }

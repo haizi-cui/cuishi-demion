@@ -4,17 +4,17 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mybatisdemion.dao.UserMapper">
     <!--id为调用的参数，resultType为返回的数据类型-->
-    <select id="getUserList" resultType="mybatisdemion.pojo.Users">
+    <select id="getUserList" resultType="users">
         select * from users;
     </select>
 
     <!--parameterType为传进来的数据类型resultType为返回的数据类型-->
-    <select id="getUserByid" resultType="mybatisdemion.pojo.Users" parameterType="String">
+    <select id="getUserByid" resultType="users" parameterType="String">
         select * from users where username = #{username};
     </select>
 
     <!--传进来一个对象类型的数据,对象中的属性可以直接取-->
-    <insert id="InitioUser" parameterType="mybatisdemion.pojo.Users" >
+    <insert id="InitioUser" parameterType="users" >
         insert into users (username,usersex) values (#{username},#{usersex});
     </insert>
 
@@ -23,7 +23,7 @@
         insert into users (username,usersex) values (#{hhh},#{uzzzsersex});
     </insert>
 
-    <update id="Updatauser" parameterType="mybatisdemion.pojo.Users">
+    <update id="Updatauser" parameterType="users">
         update users set username=(#{username}),usersex = (#{usersex})where id = (#{id});
     </update>
 
@@ -32,8 +32,8 @@
     </delete>
 
     <!--模糊查询-->
-    <select id="LinkSelect" resultType="mybatisdemion.pojo.Users" >
-        select * from users where username like #{value}
+    <select id="LinkSelect" resultType="users" >
+        select * from users where username like "%"#{value}"%";
     </select>
 
 </mapper>
