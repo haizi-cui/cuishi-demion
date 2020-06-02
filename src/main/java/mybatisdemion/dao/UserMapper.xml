@@ -36,4 +36,16 @@
         select * from users where username like "%"#{value}"%";
     </select>
 
+<!--结果集映射 id为对应的sql，type为实体类-->
+    <resultMap id="UserMap" type="Users">
+<!--        column数据库中的字段，property为实体类中的属性-->
+        <result column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="usersex" property="password"/>
+    </resultMap>
+<!--    UserMap为自己写的-->
+    <select id="SelectID" resultMap="UserMap">
+        select * from users where id = #{id};
+    </select>
+
 </mapper>

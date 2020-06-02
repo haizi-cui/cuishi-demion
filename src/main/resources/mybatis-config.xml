@@ -5,6 +5,10 @@
 <configuration>
     <!--引入外部文件-->
     <properties resource="db.properties"/>
+<!--    配置日志-->
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
     <!--给实体类型别名-->
     <typeAliases>
 <!--        <typeAlias type="mybatisdemion.pojo.Users" alias="Users"/>-->

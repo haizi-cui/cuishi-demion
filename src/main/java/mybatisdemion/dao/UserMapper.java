@@ -48,4 +48,9 @@ public interface UserMapper {
      */
     public  List<Users> LinkSelect(String value);
 
+    /**
+     * 通过id进行查询
+     */
+    public Users SelectID(int id);
+
 }

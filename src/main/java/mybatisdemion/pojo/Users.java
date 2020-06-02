@@ -6,7 +6,15 @@ public class Users {
 
     private String username;
 
-    private String usersex;
+    private String password;
+
+    public Users(int id, String username, String password) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+    }
+
+    public Users() { }
 
     public int getId() {
         return id;
@@ -24,27 +32,20 @@ public class Users {
         this.username = username;
     }
 
-    public String getUsersex() {
-        return usersex;
+    public String getPassword() {
+        return password;
     }
 
-    public void setUsersex(String usersex) {
-        this.usersex = usersex;
+    public void setPassword(String password) {
+        this.password = password;
     }
-
-    public Users( String username, String usersex) {
-        this.username = username;
-        this.usersex = usersex;
-    }
-
-    private Users(){}
 
     @Override
     public String toString() {
         return "Users{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
-                ", usersex='" + usersex + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }
