@@ -42,6 +42,21 @@
             <version>5.1.39</version>
         </dependency>
 
+        <!--json格式转换-->
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20160810</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
+
+
         <!--链接池-->
         <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
         <dependency>
@@ -56,7 +71,11 @@
             <artifactId>mybatis</artifactId>
             <version>3.5.2</version>
         </dependency>
-
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.0.0</version>
+        </dependency>
 
 
     </dependencies>

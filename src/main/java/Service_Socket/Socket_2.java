@@ -15,6 +15,7 @@ public class Socket_2 {
 
         //监听到后读取数据
         InputStream inputStream = service.getInputStream();
+
         DataInputStream reader = new DataInputStream(inputStream);
 
         String str = reader.readUTF();
